@@ -1,6 +1,3 @@
-# enterprise-hybrid-security-lab
-Homelab for practicing security, networks and administration skills
-
 # Enterprise Hybrid Security Lab
 
 A comprehensive, hands-on enterprise network and cybersecurity lab built on Proxmox VE. Designed to simulate multi-layered network segmentation, firewall management, and security monitoring environments.
