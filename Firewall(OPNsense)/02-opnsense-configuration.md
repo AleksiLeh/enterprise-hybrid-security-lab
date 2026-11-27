@@ -1,22 +1,26 @@
-# Enterprise Hybrid Security Lab - Verkkotopologia ja VLAN-segmentointi
+# Enterprise Hybrid Security Lab - Network Topology and VLAN Segmentation
 
-## 1. Laitteisto ja Ympäristö
-* **Host:** HP ProDesk (Proxmox VE)
-* **Palomuuri / Reititin:** OPNsense (asennettuna UFS-tiedostojärjestelmälle)
-* **Hallintatyöasema:** Linux Mint (kytketty eristettyyn sisäverkkoon)
+## 1. Hardware and Environment
+- **Host:** HP ProDesk (Proxmox VE)
+- **Firewall / Router:** OPNsense (installed on UFS file system)
+- **Management Workstation:** Linux Mint (connected to an isolated internal network)
 
-## 2. Proxmoxin Verkkosillat (Bridges)
-* `vmbr0`: Kotiverkon / WAN-yhteys (isäntäkoneen hallinta)
-* `vmbr1`: Eristetty sisäverkon silta (ilman fyysistä verkkokorttia), johon OPNsensen LAN (`vtnet1`) ja Linux Mint on kytketty.
+---
 
-## 3. VLAN-segmentit ja IP-osoiteavaruus
+## 2. Proxmox Network Bridges
+- `vmbr0`: Home network / WAN connection (host management)
+- `vmbr1`: Isolated internal network bridge (without a physical network card), to which the OPNsense LAN (`vtnet1`) and Linux Mint are connected.
 
-| VLAN ID | Alueen Nimi | Yhdyskäytävä (Gateway) | DHCP-alue | Käyttötarkoitus |
+---
+
+## 3. VLAN Segments and IP Address Space
+
+| VLAN ID | Area Name | Gateway | DHCP Range | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
-| **VLAN 10** | Corporate | `10.0.10.1/24` | `10.0.10.100` – `10.0.10.200` | Yrityksen simuloitu sisäverkko (työasemat) |
-| **VLAN 20** | SOC | `10.0.20.1/24` | `10.0.20.100` – `10.0.20.200` | Valvonta, lokitus ja hallintatyökalut |
-| **VLAN 30** | Honeypot | `10.0.30.1/24` | `10.0.30.100` – `10.0.30.200` | Haavoittuvat syöttölaitteet ja ansat |
-| **VLAN 40** | Attacker | `10.0.40.1/24` | `10.0.40.100` – `10.0.40.200` | Hyökkäyskoneen / Red Team -toiminnan verkko |
+| **VLAN 10** | Corporate | `10.0.10.1/24` | `10.0.10.100` – `10.0.10.200` | Simulated corporate internal network (workstations) |
+| **VLAN 20** | SOC | `10.0.20.1/24` | `10.0.20.100` – `10.0.20.200` | Monitoring, logging, and management tools |
+| **VLAN 30** | Honeypot | `10.0.30.1/24` | `10.0.30.100` – `10.0.30.200` | Vulnerable decoy systems and traps |
+| **VLAN 40** | Attacker | `10.0.40.1/24` | `10.0.40.100` – `10.0.40.200` | Attack machine / Red Team activity network |
 
 <img width="1018" height="636" alt="kuva" src="https://github.com/user-attachments/assets/435cc914-551d-42f3-b617-7409dfadfac4" />
 
