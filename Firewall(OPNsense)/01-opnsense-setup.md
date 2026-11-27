@@ -14,7 +14,7 @@ Deploy OPNsense as a virtual firewall on Proxmox VE to handle future network seg
 5. Detached the installation ISO media from the VM hardware settings.
 6. Assigned interfaces via the OPNsense console:
    - **WAN:** `vtnet0` (DHCP from home router)
-   - **LAN:** `vtnet1`
+   - **LAN:** `vtnet1` (Created a new bridge vmbr1 and added vtnet1 to it and also changed Linux Mint netwrok bridge to vmbr1 so i can connect to opnsense via browser)
 <img width="865" height="448" alt="kuva" src="https://github.com/user-attachments/assets/1f707d72-6707-4b0c-859c-026e8beba3e2" />
 
 7. Reconfigured the LAN interface IP address from the default `192.168.1.1/24` to `10.0.1.1/24` (with DHCP enabled for `10.0.1.100 - 10.0.1.200`) to avoid IP conflicts with the upstream home router.
