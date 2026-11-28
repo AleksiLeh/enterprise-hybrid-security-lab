@@ -28,6 +28,8 @@
 
 <img width="1017" height="609" alt="kuva" src="https://github.com/user-attachments/assets/377ebf4b-23de-4f61-8917-96133b4b4e39" />
 
-Putting DHCP on in interfaces
+## 3. Putting DHCP on in interfaces and giving them a ip range
 
 <img width="1015" height="512" alt="kuva" src="https://github.com/user-attachments/assets/ceddd1f0-0f08-4d74-ba02-5ed9237273af" />
+
+<img width="1015" height="543" alt="kuva" src="https://github.com/user-attachments/assets/d43d7970-77d5-48b8-a248-633108ff1ca6" />
