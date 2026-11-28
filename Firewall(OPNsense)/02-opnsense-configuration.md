@@ -17,13 +17,17 @@
 
 | VLAN ID | Area Name | Gateway | DHCP Range | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
-| **VLAN 10** | Corporate | `10.0.10.1/24` | `10.0.10.100` – `10.0.10.200` | Simulated corporate internal network (workstations) |
-| **VLAN 20** | SOC | `10.0.20.1/24` | `10.0.20.100` – `10.0.20.200` | Monitoring, logging, and management tools |
-| **VLAN 30** | Honeypot | `10.0.30.1/24` | `10.0.30.100` – `10.0.30.200` | Vulnerable decoy systems and traps |
-| **VLAN 40** | Attacker | `10.0.40.1/24` | `10.0.40.100` – `10.0.40.200` | Attack machine / Red Team activity network |
+| **VLAN 10** | Corporate | `10.0.10.1/24` | Simulated corporate internal network (workstations) |
+| **VLAN 20** | SOC | `10.0.20.1/24` | Monitoring, logging, and management tools |
+| **VLAN 30** | Honeypot | `10.0.30.1/24` | Vulnerable decoy systems and traps |
+| **VLAN 40** | Attacker | `10.0.40.1/24` | Attack machine / Red Team activity network |
 
 <img width="1018" height="636" alt="kuva" src="https://github.com/user-attachments/assets/435cc914-551d-42f3-b617-7409dfadfac4" />
 
 <img width="848" height="464" alt="kuva" src="https://github.com/user-attachments/assets/4cbb4f79-49c9-4a75-bf6c-3fe5e34e696e" />
 
 <img width="1017" height="609" alt="kuva" src="https://github.com/user-attachments/assets/377ebf4b-23de-4f61-8917-96133b4b4e39" />
+
+Putting DHCP on in interfaces
+
+<img width="1015" height="512" alt="kuva" src="https://github.com/user-attachments/assets/ceddd1f0-0f08-4d74-ba02-5ed9237273af" />
